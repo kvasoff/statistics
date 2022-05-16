@@ -10,8 +10,14 @@ public class StatsService {
     }
 
     public long average(long[] sales) {
-        return sumAllSale(sales) / sales.length;
+        long result = 0;
+        if (sales.length > 0) {
+            result = sumAllSale(sales) / sales.length;
+        }
+        return result;
+        //return sumAllSale(sales) / sales.length;
     }
+
 
     public int maxSales(long[] sales) {
         int maxMonth = 0;
